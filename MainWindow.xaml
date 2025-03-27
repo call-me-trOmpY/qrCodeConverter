@@ -5,15 +5,22 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:QrCodeConverter"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="700">
     <Grid>
-        <Button Content="Button 1" 
+        <Button Content="Open File"
                 HorizontalAlignment="Left" 
-                VerticalAlignment="Bottom" 
-                Margin="500,0,0,24" Width="96" Height="32"/>
+                VerticalAlignment="Stretch"
+                Margin="50,0,0,24" Width="96" Height="32"/>
         
+        <Button Content="Browse File"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Margin="50,50,0,0"
+                Width="96"
+                Height="32"
+                Click="BrowseFileButton_Click"/>
         
-        <Button Content="Button 2" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="520,5,10,24" Width="96" Height="32"/>  
+        <Button Content="Cancel" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="20,5,30,50" Width="96" Height="32" Click="CancelButton_Click"/>  
         
         
     </Grid>

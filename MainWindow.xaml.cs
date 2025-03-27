@@ -8,6 +8,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Microsoft.Win32;
+
 
 namespace QrCodeConverter;
 
@@ -19,5 +21,24 @@ public partial class MainWindow : Window
     public MainWindow()
     {
         InitializeComponent();
+        
+        
     }
+    
+    private void BrowseFileButton_Click(object sender, RoutedEventArgs e)
+    {
+        OpenFileDialog openFileDialog = new OpenFileDialog();
+        if (openFileDialog.ShowDialog() == true)
+        {
+            string selectedFilePath = openFileDialog.FileName;
+            // You can now use the selectedFilePath variable as needed
+            MessageBox.Show("Selected file: " + selectedFilePath);
+        }
+    }
+
+    private void CancelButton_Click(object sender, RoutedEventArgs e)
+    {
+        this.Close();
+    }
+    
 }
